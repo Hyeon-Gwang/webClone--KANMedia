@@ -11,3 +11,6 @@ http://kanmedia.co.kr/
 
 2021-02-22: .introduce-item:hover 추가(transition 적용 안됨)
             hamburger menu button 추가(메뉴는 수정 X)
+
+2021-02-23 모바일 사이즈에서 문의 버튼 수정
+           모바일 사이즈에서 .main--introduce 수정

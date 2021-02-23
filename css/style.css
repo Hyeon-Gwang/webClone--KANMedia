@@ -63,31 +63,28 @@ header .hamburger-menu:hover{cursor: pointer;}
 .main--top{}
 .main--top .main--title h2{margin-bottom: 15px; font-size: 70px; font-weight: 400; color: #fff; text-transform: uppercase;}
 .main--top .main--title h3{font-size: 20px; color: #fff;}
-.main--top .main--question .btn{display: flex; align-items: center; font-size: 18px;}
-.main--top .main--question .btn{margin-top: 110px;position: relative;}
-.main--top .main--question .btn i{
-    width: 52px; height: 52px;
-    position: absolute; left: 10px;
+.main--top .main--question a.btn{display: flex; align-items: center; margin-top: 110px; position: relative; font-size: 18px;}
+
+.main--top .main--question a.btn i{
+    width: 52px; height: 52px; position: absolute; left: 10px;
     display: flex; justify-content: center; align-items: center;
-    background-color: #004cd5; font-size: 22px;
-    border-radius: 50%;
-    color: #fff;
+    background-color: #004cd5; border-radius: 50%;
+    font-size: 22px; color: #fff;
 }
-.main--top .main--question .btn p{
-    padding: 0 30px 0 72px;
-    background-color: #fff;
-    border-radius: 30px;
+.main--top .main--question a.btn p{
+    padding: 0 30px 0 72px; background-color: #fff; border-radius: 30px;
     font-weight: 600; color: #2d2d2d; line-height: 60px;
     transition: color 0.5s;
 }
-.main--top .main--question .btn p:hover{color: #0abde3;}
-.main--top .main--question .btn:nth-child(2){display: none;}
+.main--top .main--question a.btn p:hover{color: #0abde3;}
+.main--top .main--question a.btn:nth-child(2) p{width: 261px;}
+.main--top .main--question a.btn:nth-child(2),
+.main--top .main--question a.btn:nth-child(3){display: none;}
 
-
-.main--bottom{width: 100%; height: 452px; margin-top: 55px; display: flex;}
-.main--bottom .main--video{width: 700px; height: 100%; background-color: rgba(245, 212, 212, 0.5); font-size: 40px; font-weight: 700; color: #000; line-height: 452px; text-align: center; transition: all .5s}
+.main--bottom{width: 100%; margin-top: 55px; display: flex;}
+.main--bottom .main--video{width: 700px; height: 452px; background-color: rgba(245, 212, 212, 0.5); font-size: 40px; font-weight: 700; color: #000; line-height: 452px; text-align: center; transition: all .5s}
 .main--bottom .main--introduce{
-    width: calc(100% - 700px); height: 100%;
+    width: calc(100% - 700px); height: 452px;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
@@ -112,14 +109,9 @@ header .hamburger-menu:hover{cursor: pointer;}
 .main--bottom .main--introduce .introduce-item:hover{cursor: pointer;}
 .main--bottom .main--introduce .introduce-item:hover .move-introduce{display: block;}
 
-.main-slider{position: absolute; bottom: 45px;}
-.main-slider .slider{
-    width: 100vw; height: 112px;
-    display: flex;
-    background-color: #000;
-    overflow: hidden;
-}
-.slider .slider-item{width: 210px; height: 100%; display: flex; justify-content: center; align-items: center; position: relative; color: #fff;}
+.main-slider{width: 100%; position: absolute; bottom: 45px;}
+.main-slider .slider{display: flex; height: 112px; background-color: #000;}
+.slider .slider-item{width: 20%; height: 100%; display: flex; justify-content: center; align-items: center; position: relative; color: #fff;}
 
 /* FOOTER */
 footer{background-color: #232425;}
@@ -163,10 +155,10 @@ footer .footer--info .info i{position: absolute; right: 0;;}
 @media screen and (max-width: 910px) {
     header .header__menu li a{padding: 0 5px; font-size: 15px;}
 
-    .main--bottom{height: 290px;}
-    .main--bottom .main--video{width: 450px; line-height: 290px;}
-    .main--bottom .main--introduce{width: calc(100% - 450px);}
+    .main--bottom .main--video{width: 450px; height: 290px; line-height: 290px;}
+    .main--bottom .main--introduce{width: calc(100% - 450px); height: 290px;}
     .main--bottom .main--introduce .introduce-item{font-size: 13px;}
+    .main--bottom .main--introduce .introduce-item:hover .move-introduce{display: none;}
 }
 
 @media screen and (max-width: 768px) {
@@ -177,4 +169,15 @@ footer .footer--info .info i{position: absolute; right: 0;;}
     header .header--right{display: none;}
     header .hamburger-menu{ display: block;}
 
+    .main--top .main--question{float: left; clear: left;}
+    .main--top .main--question a.btn{margin-top: 30px;}
+    .main--top .main--question a.btn:nth-child(3){margin-top: 15px;}
+    .main--top .main--question a.btn:nth-child(1){display: none;}
+    .main--top .main--question a.btn:nth-child(2),
+    .main--top .main--question a.btn:nth-child(3){display: flex;}
+
+    .main--bottom{flex-direction: column;}
+    .main--bottom .main--video{width: 100%; height: auto;}
+    .main--bottom .main--introduce{width: 100%; height: 280px;}
+    .main--bottom .main--introduce .introduce-item:hover .move-introduce{display: none;}
 }
